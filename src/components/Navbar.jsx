@@ -53,7 +53,7 @@ const Navbar = () => {
           <Typography variant="h5" className={classes.title}>
             BOOK TRACKER
           </Typography>
-
+        
           <Hidden xsDown>
             <Box component="div">
               <Button
