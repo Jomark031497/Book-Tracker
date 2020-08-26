@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //Material-ui
@@ -8,7 +8,7 @@ import CssBaseLine from "@material-ui/core/CssBaseline";
 import Navbar from "./components/Navbar";
 import Library from "./components/Library";
 import AddBook from "./components/AddBook";
-import BookContextProvider from './contexts/BookContext';
+import BookContextProvider from "./contexts/BookContext";
 
 function App() {
   return (
@@ -17,8 +17,8 @@ function App() {
       <BookContextProvider>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={Library} />
-          <Route path="/addbook" component={AddBook} />
+          <Route exact path="/Book-Tracker/" component={Library} />
+          <Route path="/Book-Tracker/addbook" component={AddBook} />
         </Switch>
       </BookContextProvider>
     </Router>

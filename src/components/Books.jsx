@@ -13,7 +13,6 @@ import Rating from "@material-ui/lab/Rating";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { BookContext } from "../contexts/BookContext";
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     background: "lightgrey",
@@ -39,15 +38,15 @@ const Books = ({ book }) => {
     setStars(book.rating);
   }, [book]);
 
-  const {dispatch, updateBook} = useContext(BookContext);
+  const { dispatch } = useContext(BookContext);
 
   const removeBook = (e) => {
-    dispatch({ type: "REMOVE_BOOK", id: book.id})
-  }
-  
+    dispatch({ type: "REMOVE_BOOK", id: book.id });
+  };
+
   const toggleRead = (e) => {
-      updateBook(book.id)
-  }
+    dispatch({ type: "UPDATE_BOOK", id: book.id });
+  };
 
   return (
     <>
@@ -60,11 +59,19 @@ const Books = ({ book }) => {
           <CardActions>
             <Box component="div" className={classes.cardButtons}>
               {book.isRead ? (
-                <Button variant="outlined" className={classes.finished} onClick={toggleRead}>
+                <Button
+                  variant="outlined"
+                  className={classes.finished}
+                  onClick={toggleRead}
+                >
                   Finished
                 </Button>
               ) : (
-                <Button variant="outlined" className={classes.currently} onClick={toggleRead}>
+                <Button
+                  variant="outlined"
+                  className={classes.currently}
+                  onClick={toggleRead}
+                >
                   Currently Reading
                 </Button>
               )}

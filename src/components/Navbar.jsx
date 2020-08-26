@@ -53,18 +53,18 @@ const Navbar = () => {
           <Typography variant="h5" className={classes.title}>
             BOOK TRACKER
           </Typography>
-        
+
           <Hidden xsDown>
             <Box component="div">
               <Button
                 className={classes.navButtons}
-                onClick={() => history.push("/")}
+                onClick={() => history.push("/Book-Tracker/")}
               >
                 Library
               </Button>
               <Button
                 className={classes.navButtons}
-                onClick={() => history.push("/addbook")}
+                onClick={() => history.push("/Book-Tracker/addbook")}
               >
                 Add Book
               </Button>

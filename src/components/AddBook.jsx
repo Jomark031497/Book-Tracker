@@ -61,7 +61,7 @@ const AddBook = () => {
       isRead: false,
     });
 
-    history.push("/");
+    history.push("/Book-Tracker/");
   };
 
   const classes = useStyles();
